@@ -13,75 +13,77 @@
 
     <div class="section">
       <div class="container">
-        <div class="sidebar column is-one-third">
-          <nav class="panel">
-            <p class="panel-heading">Adopt a Puppy</p>
-            <div class="panel-block">
-              <div class="media">
-                <div class="media-left">
-                  <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                </div>
-                <div class="media-content">
-                  <p class="subtitle">Bill Dog</p>
-                  <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                  <a href="#" class="subtitle is-6">read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="panel-block">
-              <div class="media">
-                <div class="media-left">
-                  <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                </div>
-                <div class="media-content">
-                  <p class="subtitle">Bill Dog</p>
-                  <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                  <a href="#" class="subtitle is-6">read more</a>
+        <div class="columns">
+          <div class="sidebar column is-4">
+            <nav class="panel">
+              <p class="panel-heading">Adopt a Puppy</p>
+              <div class="panel-block">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
+                  </div>
+                  <div class="media-content">
+                    <p class="subtitle">Bill Dog</p>
+                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
+                    <a href="#" class="subtitle is-6">read more</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="panel-block">
-              <div class="media">
-                <div class="media-left">
-                  <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                </div>
-                <div class="media-content">
-                  <p class="subtitle">Bill Dog</p>
-                  <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                  <a href="#" class="subtitle is-6">read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="panel-block">
-              <div class="media">
-                <div class="media-left">
-                  <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                </div>
-                <div class="media-content">
-                  <p class="subtitle">Bill Dog</p>
-                  <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                  <a href="#" class="subtitle is-6">read more</a>
+              <div class="panel-block">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
+                  </div>
+                  <div class="media-content">
+                    <p class="subtitle">Bill Dog</p>
+                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
+                    <a href="#" class="subtitle is-6">read more</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="panel-block">
-              <div class="media">
-                <div class="media-left">
-                  <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                </div>
-                <div class="media-content">
-                  <p class="subtitle">Bill Dog</p>
-                  <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                  <a href="#" class="subtitle is-6">read more</a>
+              <div class="panel-block">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
+                  </div>
+                  <div class="media-content">
+                    <p class="subtitle">Bill Dog</p>
+                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
+                    <a href="#" class="subtitle is-6">read more</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </nav>
+              <div class="panel-block">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
+                  </div>
+                  <div class="media-content">
+                    <p class="subtitle">Bill Dog</p>
+                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
+                    <a href="#" class="subtitle is-6">read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-block">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
+                  </div>
+                  <div class="media-content">
+                    <p class="subtitle">Bill Dog</p>
+                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
+                    <a href="#" class="subtitle is-6">read more</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="column is-8">
+            <router-view></router-view>
+          </div>
         </div>
 
-        <div class="column is-two-thirds">
-          <router-view></router-view>
-        </div>
       </div>
     </div>
   </div>
