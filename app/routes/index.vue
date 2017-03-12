@@ -8,6 +8,15 @@
 export default {
   data() {
     return {
+      formValues: {
+        name: '',
+        age: '',
+        sex: '',
+        color: '',
+        breed: '',
+        imageURL: '',
+        description: ''
+      }
     };
   },
 
