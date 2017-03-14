@@ -30,7 +30,7 @@ export function findOneComplete(data = {}) {
 }
 
 export function findOne(id) {
-  return dispatch => fetch(`${apiUrl}.${id}`).then(parseJson)
+  return dispatch => fetch(`${apiUrl}/${id}`).then(parseJson)
   .then((response) => {
     dispatch(findOneComplete(response));
   });
@@ -49,7 +49,25 @@ export function create(formData) {
     headers: jsonHeaders,
     body: JSON.stringify(formData)
   }).then(parseJson)
-  .then((puppy) => {
-    dispatch(createComplete(puppy));
+  .then((response) => {
+    dispatch(createComplete(response));
+  });
+}
+
+export function updateComplete(data = {}) {
+  return {
+    type: 'UPDATE_COMPLETE',
+    data
+  };
+}
+
+export function update(id, formData) {
+  return dispatch => fetch(`${apiUrl}/${id}`, {
+    method: 'PUT',
+    headers: jsonHeaders,
+    body: JSON.stringify(formData)
+  }).then(parseJson)
+  .then((response) => {
+    dispatch(updateComplete(response));
   });
 }
