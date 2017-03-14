@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 export default function puppies(state = [], action) {
   switch (action.type) {
     case 'PUPPY@FINDALL_COMPLETE':

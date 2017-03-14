@@ -17,14 +17,14 @@
           <div class="column is-4">
             <nav class="panel">
               <p class="panel-heading">Adopt a Puppy</p>
-              <div v:for="puppy in puppies" class="panel-block">
+              <div v-for="puppy in puppies" class="panel-block">
                 <div class="media">
                   <div class="media-left">
-                    <img src="puppy.image_path" alt="" class="image is-64x64">
+                    <img :src="puppy.image_url" alt="" class="image is-64x64">
                   </div>
                   <div class="media-content">
-                    <!-- <p class="subtitle">{{ puppy.name }}</p> -->
-                    <!-- <router-link :to="{ name: 'detail', id: puppy.id }">Read More</router-link> -->
+                    <p class="subtitle">{{ puppy.name }}</p>
+                    <router-link :to="{ name: 'detail', id: puppy.id }">Read More</router-link>
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@ export default {
   },
 
   mounted() {
-    store.dispatch(findAll(this.$route.params.id));
+    store.dispatch(findAll());
   },
 
   methods: {
