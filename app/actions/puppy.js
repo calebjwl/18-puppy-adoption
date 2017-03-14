@@ -15,15 +15,25 @@ export function findAllComplete(data = []) {
   };
 }
 
-/**
- * Creates a thunk to find all puppies from the server
- * @return {function}
- */
 export function findAll() {
   return dispatch => fetch(apiUrl).then(parseJson)
    .then((response) => {
      dispatch(findAllComplete(response));
    });
+}
+
+export function findOneComplete(data = {}) {
+  return {
+    type: 'PUPPY@FINDONE_COMPLETE',
+    data
+  };
+}
+
+export function findOne(id) {
+  return dispatch => fetch(`${apiUrl}.${id}`).then(parseJson)
+  .then((response) => {
+    dispatch(findOneComplete(response));
+  });
 }
 
 export function createComplete(data = {}) {
