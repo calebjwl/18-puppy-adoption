@@ -25,55 +25,7 @@
                   <div class="media-content">
                     <p class="subtitle">Bill Dog</p>
                     <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                    <a href="#" class="subtitle is-6">read more</a>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-block">
-                <div class="media">
-                  <div class="media-left">
-                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                  </div>
-                  <div class="media-content">
-                    <p class="subtitle">Bill Dog</p>
-                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                    <a href="#" class="subtitle is-6">read more</a>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-block">
-                <div class="media">
-                  <div class="media-left">
-                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                  </div>
-                  <div class="media-content">
-                    <p class="subtitle">Bill Dog</p>
-                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                    <a href="#" class="subtitle is-6">read more</a>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-block">
-                <div class="media">
-                  <div class="media-left">
-                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                  </div>
-                  <div class="media-content">
-                    <p class="subtitle">Bill Dog</p>
-                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                    <a href="#" class="subtitle is-6">read more</a>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-block">
-                <div class="media">
-                  <div class="media-left">
-                    <img src="http://fillmurray.com/300/300" alt="" class="image is-64x64">
-                  </div>
-                  <div class="media-content">
-                    <p class="subtitle">Bill Dog</p>
-                    <!-- link to the `detail` route passing the parameter for the `id` of the current puppy -->
-                    <a href="#" class="subtitle is-6">read more</a>
+                    <router-link :to="{ name: 'detail' }">Read More</router-link>
                   </div>
                 </div>
               </div>

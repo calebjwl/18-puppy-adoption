@@ -1,13 +1,15 @@
 <template lang="html">
   <div class="detail">
     <div class="container">
-      <div class="media media-content">
+      <div class="nav-center">
         <h1 class="title">Luna</h1>
         <button class="button is-success"><span class="fa fa-paw"></span>I'm Adopted!</button>
       </div>
-      <img src="http://placecera.com/480/480" alt="" class="image is-480x480">
+
+      <img src="http://placecera.com/480/480" alt="" class="image is-480x480 nav-center">
+
       <nav class="level">
-        <div class="level-tem has-text-centered">
+        <div class="has-text-centered">
           <div>
             <p class="heading">Age</p>
             <p class="title">2</p>

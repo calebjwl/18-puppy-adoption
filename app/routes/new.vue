@@ -1,6 +1,6 @@
 <template lang="html">
-  <form action="" class="form">
-    <label for="" class="label">Name</label>
+  <form class="form">
+    <label class="label">Name</label>
     <p class="control">
       <input type="text" class="input">
     </p>
@@ -39,6 +39,8 @@
       <textarea cols="30" rows="10" class="textarea"></textarea>
     </p>
 
+    <button class="button">Back</button>
+    <button class="button is-info">Submit</button>
   </form>
 </template>
 

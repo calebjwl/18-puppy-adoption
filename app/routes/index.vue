@@ -1,7 +1,7 @@
 <template lang="html">
-  <div class="">
+  <table class="table">
 
-  </div>
+  </table>
 </template>
 
 <script>
