@@ -71,3 +71,13 @@ export function update(id, formData) {
     dispatch(updateComplete(response));
   });
 }
+
+export function toggleAdopted(puppy) {
+  return (dispatch) => {
+    const newPup = {
+      ...puppy,
+      adopted: !puppy.adopted
+    };
+    dispatch(update(puppy.id, newPup));
+  };
+}
