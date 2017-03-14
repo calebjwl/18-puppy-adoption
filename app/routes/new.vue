@@ -1,5 +1,5 @@
 <template lang="html">
-  <form class="form">
+  <form class="form" v-on:submit.prevent="save(formData)">
     <label class="label">Name</label>
     <p class="control">
       <input type="text" class="input">
@@ -45,6 +45,9 @@
 </template>
 
 <script>
+import { create } from '../actions/puppy';
+import store from '../store';
+
 export default {
   data() {
     return {
@@ -61,7 +64,11 @@ export default {
   },
 
   methods: {
-
+    save(data) {
+      store.dispatch(create(data._id, data)).then(() => {
+        this.$router.push({ name: 'index' });
+      });
+    },
   },
 };
 </script>
