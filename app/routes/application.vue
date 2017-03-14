@@ -54,7 +54,7 @@ export default {
 
   mounted() {
     store.dispatch(findAll(this.$route.params.id));
-  }
+  },
 
   methods: {
 
