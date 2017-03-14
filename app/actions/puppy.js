@@ -25,3 +25,21 @@ export function findAll() {
      dispatch(findAllComplete(response));
    });
 }
+
+export function createComplete(data = {}) {
+  return {
+    type: 'PUPPY@CREATE_COMPLETE',
+    data
+  };
+}
+
+export function create(formData) {
+  return dispatch => fetch(apiUrl, {
+    method: 'POST',
+    headers: jsonHeaders,
+    body: JSON.stringify(formData)
+  }).then(parseJson)
+  .then((puppy) => {
+    dispatch(createComplete(puppy));
+  });
+}
