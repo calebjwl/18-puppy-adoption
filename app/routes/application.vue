@@ -24,7 +24,7 @@
                   </div>
                   <div class="media-content">
                     <p class="subtitle">{{ puppy.name }}</p>
-                    <router-link :to="{ name: 'detail', params: { id: puppy.id } }">Read More</router-link>
+                    <th><router-link :to="{ name: 'detail', params: { id: puppy.id }}">read more</router-link></th>
                   </div>
                 </div>
               </div>
