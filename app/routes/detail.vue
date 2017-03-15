@@ -2,11 +2,21 @@
   <div class="detail">
     <div class="container">
       <div class="nav-center">
-        <h1 class="title">Luna</h1>
-        <button class="button is-success"><span class="fa fa-paw"></span>I'm Adopted!</button>
+        <h1 class="title">{{ currentPuppy.name }}</h1>
+        <button v-on:click="adopt()" class="button is-info">
+          <span class="fa fa-paw"></span>
+          <template v-if="currentPuppy.adopted" class="button is-success">Adopt Me!</template>
+          <template v-else>I'm Adopted</template>
+        </button>
       </div>
 
-      <img :src="currentPuppy.imageURL" alt="" class="image is-480x480 nav-center">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+              <img :src="currentPuppy.image_url" alt="" class="image is-480x480 nav-center">
+          </figure>
+        </div>
+      </div>
 
       <nav class="level">
         <div class="has-text-centered">
@@ -44,13 +54,13 @@
 
 <script>
 import store from '../store';
-import { findOne } from '../actions/puppy';
+import { findOne, toggleAdopted } from '../actions/puppy';
 
 export default {
   data() {
     return {
+      currentPuppy: null,
       puppies: this.$select('puppies'),
-      currentPuppy: {}
     };
   },
 
@@ -59,12 +69,16 @@ export default {
   },
 
   watch: {
-    puppy: 'getPuppy'
+    puppies: 'getPuppy'
   },
 
   methods: {
     getPuppy() {
       this.currentPuppy = this.puppies.find(puppy => puppy.id == this.$route.params.id);
+    },
+
+    adopt() {
+      store.dispatch(toggleAdopted(this.currentPuppy));
     }
   },
 };

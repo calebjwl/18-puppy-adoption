@@ -10,10 +10,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>Zombie Kid</th>
-          <th>10</th>
-          <th>read more</th>
+        <tr v-for="puppy in puppies">
+          <th>{{ puppy.name }}</th>
+          <th>{{ puppy.age }}</th>
+          <th><router-link :to="{ name: 'detail', params: { id: puppy.id }}">read more</router-link></th>
         </tr>
       </tbody>
     </table>
@@ -66,6 +66,7 @@ export default {
   },
 
   methods: {
+
 
   },
 };
