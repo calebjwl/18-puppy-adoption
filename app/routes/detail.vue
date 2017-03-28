@@ -5,8 +5,8 @@
         <h1 class="title">{{ currentPuppy.name }}</h1>
         <button v-on:click="adopt()" class="button is-info">
           <span class="fa fa-paw"></span>
-          <template v-if="currentPuppy.adopted" class="button is-success">Adopt Me!</template>
-          <template v-else>I'm Adopted</template>
+          <template v-if="currentPuppy.adopted" class="button is-success">I'm Adopted!</template>
+          <template v-else>Adopt Me!</template>
         </button>
       </div>
 
@@ -59,8 +59,8 @@ import { findOne, toggleAdopted } from '../actions/puppy';
 export default {
   data() {
     return {
-      currentPuppy: null,
       puppies: this.$select('puppies'),
+      currentPuppy: null,
     };
   },
 
@@ -69,7 +69,8 @@ export default {
   },
 
   watch: {
-    puppies: 'getPuppy'
+    puppies: 'getPuppy',
+    '$route.params.id': 'getPuppy',
   },
 
   methods: {

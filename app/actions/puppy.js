@@ -56,12 +56,14 @@ export function create(formData) {
 
 export function updateComplete(data = {}) {
   return {
-    type: 'UPDATE_COMPLETE',
+    type: 'PUPPY@UPDATE_COMPLETE',
     data
   };
 }
 
 export function update(id, formData) {
+  console.log(formData);
+
   return dispatch => fetch(`${apiUrl}/${id}`, {
     method: 'PUT',
     headers: jsonHeaders,

@@ -7,7 +7,7 @@ export default function puppies(state = [], action) {
     case 'PUPPY@FINDONE_COMPLETE':
     case 'PUPPY@CREATE_COMPLETE':
     case 'PUPPY@UPDATE_COMPLETE':
-      return _.unionBy(action.data, state, 'id');
+      return _.unionBy([action.data], state, 'id');
     default:
       return state;
   }
