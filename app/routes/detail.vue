@@ -3,9 +3,9 @@
     <div class="container">
       <div class="nav-center">
         <h1 class="title">{{ currentPuppy.name }}</h1>
-        <button v-on:click="adopt()" class="button is-info">
+        <button v-on:click="adopt()" class="button is-info" v-bind:class="{'is-success': currentPuppy.adopted }">
           <span class="fa fa-paw"></span>
-          <template v-if="currentPuppy.adopted" class="button is-success">I'm Adopted!</template>
+          <template v-if="currentPuppy.adopted">I'm Adopted!</template>
           <template v-else>Adopt Me!</template>
         </button>
       </div>
