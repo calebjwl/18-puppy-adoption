@@ -19,25 +19,25 @@
       </div>
 
       <nav class="level">
-        <div class="has-text-centered">
+        <div class="level-item has-text-centered">
           <div>
             <p class="heading">Age</p>
             <p class="title">{{ currentPuppy.age }}</p>
           </div>
         </div>
-        <div class="level-tem has-text-centered">
+        <div class="level-item has-text-centered">
           <div>
             <p class="heading">Breed</p>
             <p class="title">{{ currentPuppy.breed }}</p>
           </div>
         </div>
-        <div class="level-tem has-text-centered">
+        <div class="level-item has-text-centered">
           <div>
             <p class="heading">Color</p>
             <p class="title">{{ currentPuppy.color }}</p>
           </div>
         </div>
-        <div class="level-tem has-text-centered">
+        <div class="level-item has-text-centered">
           <div>
             <p class="heading">Sex</p>
             <p class="title">{{ currentPuppy.sex }}</p>
