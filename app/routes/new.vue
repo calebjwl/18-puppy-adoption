@@ -1,5 +1,5 @@
 <template lang="html">
-  <form class="form" v-on:submit.prevent="save(formData)">
+  <form class="form" v-on:submit.prevent="save">
     <label class="label">Name</label>
     <p class="control">
       <input v-model="formValues.name" type="text" class="input">
@@ -11,11 +11,11 @@
     </p>
 
     <label for="" class="label">Sex</label>
-    <p class="select">
-      <select v-model="formValues.sex">
+    <p class="select" v-model="formValues.sex">
+      <select>
         <option value="">Select an option</option>
-        <option value="">Male</option>
-        <option value="">Female</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
       </select>
     </p>
 
@@ -31,7 +31,7 @@
 
     <label for="" class="label">Image URL</label>
     <p class="control">
-      <input v-model="formValues.imageURL"  type="url" class="input">
+      <input v-model="formValues.image_url"  type="url" class="input">
     </p>
 
     <label for="" class="label">Description</label>
@@ -57,15 +57,15 @@ export default {
         sex: '',
         color: '',
         breed: '',
-        imageURL: '',
+        image_url: '',
         description: ''
       }
     };
   },
 
   methods: {
-    save(data) {
-      store.dispatch(create(data)).then(() => {
+    save() {
+      store.dispatch(create(this.formValues)).then(() => {
         this.$router.push({ name: 'index' });
       });
     },

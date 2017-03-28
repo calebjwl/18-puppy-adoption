@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="puppy in puppies">
+        <tr v-for="puppy in puppies" v-if="puppy.adopted !== true">
           <th>{{ puppy.name }}</th>
           <th>{{ puppy.age }}</th>
           <th><router-link :to="{ name: 'detail', params: { id: puppy.id }}">read more</router-link></th>
@@ -28,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-if="currentPuppy.adopted()" v-for="puppy in puppies">
+        <tr v-for="puppy in puppies" v-if="puppy.adopted">
           <th>{{ puppy.name }}</th>
           <th>{{ puppy.age }}</th>
           <th><router-link :to="{ name: 'detail', id: puppy.id }">read more</router-link></th>
@@ -47,16 +47,6 @@ import { findAll } from '../actions/puppy';
 export default {
   data() {
     return {
-      formValues: {
-        name: '',
-        age: '',
-        sex: '',
-        color: '',
-        breed: '',
-        imageURL: '',
-        description: ''
-      },
-
       puppies: this.$select('puppies'),
     };
   },
