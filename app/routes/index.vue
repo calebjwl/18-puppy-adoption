@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="puppy in puppies" v-if="puppy.adopted !== true">
+        <tr v-for="puppy in puppies" v-if="!puppy.adopted">
           <th>{{ puppy.name }}</th>
           <th>{{ puppy.age }}</th>
           <th><router-link :to="{ name: 'detail', params: { id: puppy.id }}">read more</router-link></th>
