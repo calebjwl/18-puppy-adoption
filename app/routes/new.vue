@@ -11,9 +11,9 @@
     </p>
 
     <label for="" class="label">Sex</label>
-    <p class="select" v-model="formValues.sex">
-      <select>
-        <option value="">Select an option</option>
+    <p class="select">
+      <select v-model="formValues.sex">
+        <option disabled value="">Select an option</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>

@@ -2,12 +2,12 @@
   <div class="app">
     <div class="nav">
       <div class="nav-left">
-        <router-link :to="{ name: 'index' }" class="nav-item is-brand">Puppies</router-link>
+        <router-link :to="{ name: 'index' }"><h1 class="nav-item is-brand">Puppies</h1></router-link>
       </div>
       <div class="nav-right nav-menu">
         <a href="" class="nav-item"></a>
-        <router-link :to="{ name: 'index' }" class="nav-item">All Puppies</router-link>
-        <router-link :to="{ name: 'new' }" class="nav-item">Add Puppy</router-link>
+        <router-link :to="{ name: 'index' }"><h1 class="nav-item is-brand">All Puppies</h1></router-link>
+        <router-link :to="{ name: 'new' }"><h1 class="nav-item is-brand">Add Puppy</h1></router-link>
       </div>
     </div>
 
